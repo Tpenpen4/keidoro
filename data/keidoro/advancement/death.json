@@ -1,0 +1,15 @@
+{
+    "criteria": {
+      "death": {
+        "trigger": "minecraft:entity_killed_player"
+      }
+    },
+    "requirements": [
+      [
+        "death"
+      ]
+    ],
+    "rewards": {
+      "function": "keidoro:death/death"
+    }
+}
