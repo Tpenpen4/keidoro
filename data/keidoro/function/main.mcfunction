@@ -15,3 +15,6 @@ execute as @a at @s[tag=Invulnerable] run effect give @s minecraft:instant_healt
 execute as @a at @s[tag=!Invulnerable] run attribute @s armor base reset
 execute as @a at @s[tag=!Invulnerable] run attribute @s knockback_resistance base reset
 execute as @a at @s[tag=!Invulnerable] run effect clear @s minecraft:instant_health
+
+# 落下物削除
+kill @e[type=item]

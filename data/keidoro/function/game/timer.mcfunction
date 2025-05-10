@@ -16,6 +16,8 @@ execute unless score nowonline online = online online if score timem status matc
 execute if score ドロボー残り keidoro_score matches 0 unless score status status matches 3 run function keidoro:game/end
 execute if score ドロボー残り keidoro_score matches 0 run scoreboard players set status status 3
 execute if score ドロボー残り keidoro_score matches 0 run bossbar set keidoro:time visible false
+# etc
+clear @a[tag=robbers] breeze_rod
 # Recursion(再帰処理)
 execute if score watch status matches 6.. run schedule function keidoro:game/timer 20t
 # End

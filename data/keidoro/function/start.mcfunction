@@ -3,7 +3,7 @@ execute unless score status status matches 0 run function keidoro:emergency
 execute unless score status status matches 0 run return fail
 scoreboard players set status status 1
  # item
-execute store result score @a item run random value 1..2
+execute store result score @a item run random value 2..3
 scoreboard players set @a status 1
 scoreboard players set watch status 0
 scoreboard players set times status 1
@@ -12,7 +12,7 @@ scoreboard players set timeh status 0
 scoreboard players set ドロボー残り keidoro_score 0
 scoreboard players set 牢屋1 keidoro_score 0
 scoreboard players set 牢屋2 keidoro_score 0
-scoreboard players set @a itemTime 0
+scoreboard players set @a itemTime -1
 clear @a
 # Tag&AdvancementReset
 tag @a remove cops
@@ -28,6 +28,7 @@ bossbar add keidoro:time "time"
 gamerule keepInventory true
 gamerule showDeathMessages true
 gamerule doImmediateRespawn true
+gamerule announceAdvancements false
 gamerule fallDamage false
 difficulty peaceful
 # OnlineCount
@@ -50,5 +51,6 @@ execute if score robbers online matches 1 run scoreboard players operation robbe
 # JobSet
 function keidoro:job/cops
 function keidoro:job/robbers
+scoreboard players set @a item 1
 # CountStart
 function keidoro:count/5
