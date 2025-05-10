@@ -12,9 +12,14 @@ scoreboard players set timeh status 0
 scoreboard players set ドロボー残り keidoro_score 0
 scoreboard players set 牢屋1 keidoro_score 0
 scoreboard players set 牢屋2 keidoro_score 0
+scoreboard players set @a itemTime 0
+clear @a
 # Tag&AdvancementReset
 tag @a remove cops
 tag @a remove robbers
+tag @a remove rou1
+tag @a remove rou2
+tag @s remove Invulnerable
 advancement revoke @a only keidoro:libdetect
 advancement revoke @a only keidoro:death
 # TimeSetting
@@ -23,10 +28,12 @@ bossbar add keidoro:time "time"
 gamerule keepInventory true
 gamerule showDeathMessages true
 gamerule doImmediateRespawn true
+gamerule fallDamage false
+difficulty peaceful
 # OnlineCount
-#execute store result score online online run tellraw @a "ケイドロを開始しています..."
+execute store result score online online run tellraw @a "ケイドロを開始しています..."
+execute if score debug status matches 1 run scoreboard players set online online 3
 # PlayerLimit
-scoreboard players set online online 3
 execute if score online online matches 0..1 run tellraw @a [{"score":{"name":"online","objective":"online"},"color":"red"},{"text":"人ではプレイできません。2人からプレイできます。","color":"red"}]
 execute if score online online matches 0..1 run function keidoro:setting
 execute if score online online matches 0..1 run return fail

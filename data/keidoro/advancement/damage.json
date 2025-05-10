@@ -1,0 +1,15 @@
+{
+    "criteria": {
+      "damage": {
+        "trigger": "minecraft:player_hurt_entity"
+      }
+    },
+    "requirements": [
+      [
+        "damage"
+      ]
+    ],
+    "rewards": {
+      "function": "keidoro:item/cops/damage"
+    }
+}

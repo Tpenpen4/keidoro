@@ -1,5 +1,5 @@
 座標メモ
-ロビー：100 108 140
+ロビー：-5 -63 -11
 開始.robbers：-5 63 50
 開始.cops:40 71 130
 牢屋1：-41 69 138
@@ -11,3 +11,6 @@
 status:開始１、ゲーム２、終了３
 
 
+/give @a minecraft:ghast_tear[can_place_on={blocks:[]},consumable={consume_seconds:0.08,sound:{sound_id:entity.experience_orb.pickup}},minecraft:food={nutrition:0,saturation:0,can_always_eat:true},use_cooldown={seconds:30}]
+
+/give @s bow[minecraft:damage=10000,minecraft:enchantments={power:5}]

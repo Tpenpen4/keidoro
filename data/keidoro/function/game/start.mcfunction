@@ -17,5 +17,8 @@ function keidoro:game/timer
 # tp
 tp @a[tag=cops] 20 -52 0
 tp @a[tag=robbers] -19 -52 0
+tag @a[tag=!robbers] add Invulnerable
+# giveItem
+function keidoro:item/give
 # StatusPlaying
 scoreboard players set status status 2

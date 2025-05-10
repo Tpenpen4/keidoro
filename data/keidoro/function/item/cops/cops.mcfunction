@@ -1,4 +1,3 @@
 give @p minecraft:breeze_rod[minecraft:item_name="警棒",minecraft:enchantments={"minecraft:sharpness":10}]
 give @p diamond_chestplate[item_name="警察な服",enchantments={"minecraft:protection":10,"minecraft:binding_curse":10}]
-
 give @p minecraft:arrow[consumable={consume_seconds:0.1,sound:{sound_id:entity.experience_orb.pickup}},minecraft:food={nutrition:0,saturation:0,can_always_eat:true},use_cooldown={seconds:30}] 2

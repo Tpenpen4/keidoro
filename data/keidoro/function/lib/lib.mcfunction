@@ -10,3 +10,12 @@ execute if score status lib matches 1 run scoreboard players operation ドロボ
 execute if score status lib matches 2 run scoreboard players operation ドロボー残り keidoro_score += 牢屋2 keidoro_score
 execute if score status lib matches 1 run scoreboard players set 牢屋1 keidoro_score 0
 execute if score status lib matches 2 run scoreboard players set 牢屋2 keidoro_score 0
+
+execute if score status lib matches 1 run scoreboard players set @a[scores={status=2}] status 1
+execute if score status lib matches 2 run scoreboard players set @a[scores={status=3}] status 1
+
+execute if score status lib matches 1 run tag @a[tag=rou1] add Invulnerable
+execute if score status lib matches 2 run tag @a[tag=rou2] add Invulnerable
+execute if score status lib matches 1 run effect give @a[tag=rou1] speed 2 3 false
+execute if score status lib matches 2 run effect give @a[tag=rou2] speed 2 3 false
+schedule function keidoro:lib/effect 2s

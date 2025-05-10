@@ -1,0 +1,1 @@
+scoreboard players set debug status 1

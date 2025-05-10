@@ -12,6 +12,10 @@ execute unless score nowonline online = online online if score timem status matc
 execute unless score nowonline online = online online if score timem status matches 2.. run bossbar set keidoro:time visible false
 execute unless score nowonline online = online online if score timem status matches 2.. run function keidoro:game/end
 execute unless score nowonline online = online online if score timem status matches 2.. run tellraw @a "開始直後に一部のプレイヤーの通信が切断されたため無効試合になりました"
+# CopsWin
+execute if score ドロボー残り keidoro_score matches 0 unless score status status matches 3 run function keidoro:game/end
+execute if score ドロボー残り keidoro_score matches 0 run scoreboard players set status status 3
+execute if score ドロボー残り keidoro_score matches 0 run bossbar set keidoro:time visible false
 # Recursion(再帰処理)
 execute if score watch status matches 6.. run schedule function keidoro:game/timer 20t
 # End
